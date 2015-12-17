@@ -32,6 +32,8 @@ The functionality I require means that I need:
 * Two BFFs at the interface level, one per user experience (that is, one for the mobile app and one for the browser app).
 * Two microservices, one for handling submissions and one for handling reporting.
 
+I will expose the required methods of each component using HTTP REST.
+
 It's important here to note that the role of the reporting microservice is to enable the two BFFs to expose the appropriate information. It shouldn't actually determine the appropriate information within the service.
 
 ![Good BFF](images/good_bff.png)
@@ -55,3 +57,15 @@ Of course, these options are essentially the same and would cause the same bottl
 
 ![Bad BFF](images/bad_bff.png)
 
+## Microservices
+
+According to the architecture, I am going to need two microservices; submissions and reporting.
+
+### Submissions
+
+I anticipate this being a relatively easy microservice to implement and so I will write it in Java. It'll be my first real experience with Java so it's likely sensible to little attention to the actual code!
+
+I'd like my microservice to have the following functionality:
+
+* Portable. I'd like to be able to deploy my service anywhere (within reason) and have it function as I expect. I'm not sure exactly what this entails technically so it's something to bear in mind as I develop.
+* Independent. It shouldn't rely on any other services. I should be able to deploy it and interact with it using the methods it exposes. The way I interact with it shouldn't matter.
