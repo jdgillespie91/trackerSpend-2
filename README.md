@@ -34,7 +34,7 @@ The functionality I require means that I need:
 
 It's important here to note that the role of the reporting microservice is to enable the two BFFs to expose the appropriate information. It shouldn't actually determine the appropriate information within the service.
 
-![Good BFF](/Users/jake/googleDrive/Projects/trackerSpend-2/images/good_bff.png)
+![Good BFF](images/good_bff.png)
 
 In order to understand why this is a sensible choice, I'll talk about a couple of other options as well.
 
@@ -45,7 +45,7 @@ This choice of architecture is undesirable because one of two things will happen
 * The API exposes a single reporting interface that cannot possibly be optimal for both clients. This is obviously not good.
 * The API exposes two reporting interfaces, one per client. The issue here is less clear because of the scale of my project but suppose the same principles were applied to something much larger and more complex. The API would need to contain so much business logic and would become a bottleneck in development.
 
-![Monolith](/Users/jake/googleDrive/Projects/trackerSpend-2/images/monolith.png)
+![Monolith](images/monolith.png)
 
 The second option I considered was having a BFF per function. That is, submissions would go through the same BFF but reporting would go through different ones.
 
@@ -53,5 +53,5 @@ In the [article on BFF](http://samnewman.io/patterns/architectural/bff/), Sam ar
 
 Of course, these options are essentially the same and would cause the same bottleneck described in the article; a change in the backend (in this case, the submissions BFF) would require the backend team to consult the other frontend team using the same API in order to come to some mutually agreeable solution. This is exactly the problem BFF tries to avoid and it has occurred here because the logic that should belong in the service has been bought up to the API level.
 
-![Bad BFF](/Users/jake/googleDrive/Projects/trackerSpend-2/images/bad_bff.png)
+![Bad BFF](images/bad_bff.png)
 
