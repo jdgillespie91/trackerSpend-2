@@ -8,6 +8,13 @@ This project aims to explore an implementation of SOA. I will be using the same 
 * explore the [BFF pattern](http://samnewman.io/patterns/architectural/bff/).
 * produce results that can clearly demonstrate the benefit of SOA.
 
+### Current Progress
+* I've decided on the high-level architecture for this project.
+* I've started writing an API that allows a user to POST to the submissions microservice. The source code for this can be found in services/submissions/src.
+
+### Up Next
+* I want to be able to scalably deploy the submissions service. As such, my next goal is to be able to deploy the submissions service arbitrarily, likely behind a load balancer and using a queuing system such as SQS, such that I can submit a POST request and one of the services picks up the request and processes it.
+
 ## Functionality
 I would like to enable the following:
 
@@ -63,7 +70,7 @@ According to the architecture, I am going to need two microservices; submissions
 
 ### Submissions
 
-I anticipate this being a relatively easy microservice to implement and so I will write it in Java. It'll be my first real experience with Java so it's likely sensible to little attention to the actual code!
+I anticipate this being a relatively easy microservice to implement and so I will write it in Go. It'll be my first real experience with Go so it's likely sensible to pay little attention to the actual code!
 
 I'd like my microservice to have the following functionality:
 
