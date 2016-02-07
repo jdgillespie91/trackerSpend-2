@@ -1,7 +1,7 @@
 # trackerSpend-2
 A new and improved trackerSpend!
 
-Recently I've been reading a lot about microservices and I've found myself rather intrigued. I've noticed that there is a subtle difference between what is often perceived as service-oriented architecture (SOA) and a collection of microservices, and this confusion can mean not realising any of the benefits of microservices and SOA (since they should really be one and the same).
+Recently I've been reading a lot about microservices and I've found myself wanting to investigate further. I've noticed that there is a subtle difference between what is often perceived as service-oriented architecture (SOA) and what is actually a collection of microservices, and this confusion can mean not realising any of the benefits of microservices and SOA (since they should really be one and the same).
 
 This project aims to explore an implementation of SOA. I will be using the same domain as in the [original trackerSpend](https://github.com/jdgillespie91/trackerSpend) but will focus on different things. In particular, I want to
 
